@@ -40,7 +40,8 @@ cp server.* tmp-db
 docker run -it --network=host \
 -w /opt/workdir -v $PWD:/opt/workdir tensorflow/tensorflow:2.21.0 bash
 
-pip install psycopg2-binary
+python3 -m pip install --upgrade pip
+pip install psycopg2-binary==2.9.13
 
 python foobar.py
 
