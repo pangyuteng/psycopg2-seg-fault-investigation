@@ -44,3 +44,5 @@ python foobar.py
 
 
 ```
+
+<img width="1498" height="311" alt="image" src="https://github.com/user-attachments/assets/87f171e5-d108-4f15-a9b8-5f20de827fe6" />
