@@ -1,6 +1,10 @@
-import psycopg2
+
+import faulthandler
+faulthandler.enable()
+
+# import tensorflow  # when you import tensorflow you get segmentation fault
 import tensorflow
-#import psycopg2
+import psycopg2
 
 connection = psycopg2.connect("postgresql://postgres:postgres@localhost:5432/postgres")
 connection.set_client_encoding('utf8')

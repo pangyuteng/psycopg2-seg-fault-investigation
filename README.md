@@ -1,4 +1,12 @@
+
 # psycopg2-seg-fault-investigation
+
+
+```
+
+https://github.com/psycopg/psycopg2/issues/543
+
+https://stackoverflow.com/questions/2011578/can-i-find-out-where-a-python-application-crashed-using-the-data-dump
 
 -u postgres
 
@@ -11,11 +19,16 @@ postgres:17.2-bullseye
 https://goteleport.com/learn/postgresql-ssl-authentication-guide/
 
 openssl genrsa -des3 -out server.key 2048
+
 securepassword
+
 openssl req -new -key server.key -out server.csr
 
-Common Name: ???
+Common Name: abc.com
+
 openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt 
+
+sudo cp server.* tmp-db/
 
 add below to postgres conf
 ssl_passphrase_command = 'echo "securepassword"'
@@ -28,3 +41,6 @@ docker run -it --network=host \
 pip install psycopg2-binary
 
 python foobar.py
+
+
+```
