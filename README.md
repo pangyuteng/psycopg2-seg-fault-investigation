@@ -45,12 +45,38 @@ pip install psycopg2-binary
 python foobar.py
 
 # if `import tensorflow` comes before `import psycopg2`, you get segmentation fault
+# tensorflow have a line "import ssl"
 
 ldd /usr/local/lib/python3.11/dist-packages/psycopg2/_psycopg.cpython-311-x86_64-linux-gnu.so
 
-find / -name "libpq*"
+# find / -name "libpq*"
 
-find / -name "libssl*"
+/usr/local/lib/python3.11/dist-packages/psycopg2_binary.libs/libpq-a17e3caa.so.5.17
+
+# find / -name "libssl*"
+
+/usr/lib/x86_64-linux-gnu/libssl.so.3
+/usr/local/lib/python3.11/dist-packages/psycopg2_binary.libs/libssl-8bd944e8.so.3
+
+https://github.com/search?q=repo%3Atensorflow%2Ftensorflow+libssl&type=code
+
+
+# didn't work 1
+apt-get update && apt-get install libssl-dev -yq
+^^^  without specifying libssl version, above is not doing anything
+
+# didn't work 2
+apt-get install python3-psycopg2
+
+# didn't work 3ss
+apt update && apt install python3.11-dev libpq-dev
+pip install psycopg2 --no-binary psycopg2
+
+---
+
+# working
+docker container tensorflow/tensorflow:2.18.0
+
 
 
 ```

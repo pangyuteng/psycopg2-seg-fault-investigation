@@ -2,7 +2,6 @@
 import faulthandler
 faulthandler.enable()
 
-# import tensorflow  # when you import tensorflow you get segmentation fault
 import tensorflow
 import psycopg2
 
