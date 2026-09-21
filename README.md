@@ -6,6 +6,8 @@
 
 https://github.com/psycopg/psycopg2/issues/543
 
+libpq libssl
+
 https://stackoverflow.com/questions/2011578/can-i-find-out-where-a-python-application-crashed-using-the-data-dump
 
 -u postgres
@@ -42,5 +44,8 @@ pip install psycopg2-binary
 
 python foobar.py
 
+# if `import tensorflow` comes before `import psycopg2`, you get segmentation fault
+
+ldd /usr/local/lib/python3.11/dist-packages/psycopg2/_psycopg.cpython-311-x86_64-linux-gnu.so
 
 ```
