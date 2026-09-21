@@ -48,8 +48,15 @@ python foobar.py
 
 ldd /usr/local/lib/python3.11/dist-packages/psycopg2/_psycopg.cpython-311-x86_64-linux-gnu.so
 
+find / -name "libpq*"
+
+find / -name "libssl*"
+
+
 ```
 
 <img width="1498" height="311" alt="image" src="https://github.com/user-attachments/assets/87f171e5-d108-4f15-a9b8-5f20de827fe6" />
 
 <img width="1500" height="481" alt="image" src="https://github.com/user-attachments/assets/16063669-078f-4ef8-b83e-f18a1efe489a" />
+
+<img width="897" height="310" alt="image" src="https://github.com/user-attachments/assets/cc639cac-f86f-4070-9030-217e88778f75" />
